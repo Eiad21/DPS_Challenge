@@ -69,3 +69,12 @@ Select 'Custom Container' and choose the container created in the previous step
 The only other setting that needs to be set is the 'Machine type' in ' Compute and pricing'. Set it to n1-standard-4 as this training job is a relatively lightweight one and leave the rest as is. The training job will take around 15 minutes to complete
 
 ![machine_n1](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/machine-type-vertex.png)
+
+
+## Deploy trained model to endpoint ##
+
+After the model has been deployed, select it from the Models tab and click 'Deploy to Endpoint'. Choose a name for the endpoint, and select an appropriate machine and leave the rest as is.
+
+![endpoint_name](https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true)
+
+![endpoint_machine](https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true)
