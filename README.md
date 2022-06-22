@@ -55,8 +55,7 @@ docker push $IMAGE_URI
 
 Next we'll use the container we built to run our training code. First, navigate to the Training subsection in the Vertex section of the Cloud console and select Create.
 
-<img src="https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png" alt="training_v" width="150"/>
-<!-- ![training_v](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png | width=150) -->
+<img src="https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png" alt="training_v" width="250"/>
 
 * Select No managed dataset
 * Then select  (advanced) Set the training method as Custom training and click Continue.
@@ -65,17 +64,19 @@ Next we'll use the container we built to run our training code. First, navigate 
 
 Select 'Custom Container' and choose the container created in the previous step
 
-![container_c](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png)
+<img src="https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png" alt="container_c" width="250"/>
+<!-- ![container_c](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png) -->
 
 The only other setting that needs to be set is the 'Machine type' in ' Compute and pricing'. Set it to n1-standard-4 as this training job is a relatively lightweight one and leave the rest as is. The training job will take around 15 minutes to complete
 
-![machine_n1](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/machine-type-vertex.png)
+<img src="https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/machine-type-vertex.png" alt="container_c" width="300"/>
 
 
 ## Deploy trained model to endpoint ##
 
 After the model has been deployed, select it from the Models tab and click 'Deploy to Endpoint'. Choose a name for the endpoint, and select an appropriate machine and leave the rest as is.
 
-![endpoint_name](https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true)
+<img src="https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true" alt="endpoint_name" width="300"/>
 
-![endpoint_machine](https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true)
+<img src="https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true" alt="endpoint_machine" width="300"/>
+
