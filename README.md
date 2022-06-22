@@ -55,7 +55,7 @@ docker push $IMAGE_URI
 
 Next we'll use the container we built to run our training code. First, navigate to the Training subsection in the Vertex section of the Cloud console and select Create.
 
-[training_v](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png)
+![training_v](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png)
 
 * Select No managed dataset
 * Then select  (advanced) Set the training method as Custom training and click Continue.
@@ -64,8 +64,8 @@ Next we'll use the container we built to run our training code. First, navigate 
 
 Select 'Custom Container' and choose the container created in the previous step
 
-[container_c](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png)
+![container_c](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png)
 
 The only other setting that needs to be set is the 'Machine type' in ' Compute and pricing'. Set it to n1-standard-4 as this training job is a relatively lightweight one and leave the rest as is. The training job will take around 15 minutes to complete
 
-[machine_n1](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/machine-type-vertex.png)
+![machine_n1](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/machine-type-vertex.png)
