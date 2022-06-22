@@ -55,7 +55,8 @@ docker push $IMAGE_URI
 
 Next we'll use the container we built to run our training code. First, navigate to the Training subsection in the Vertex section of the Cloud console and select Create.
 
-![training_v](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png | width=150)
+<img src="https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png" alt="training_v" width="150"/>
+<!-- ![training_v](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/vertex-menu-training.png | width=150) -->
 
 * Select No managed dataset
 * Then select  (advanced) Set the training method as Custom training and click Continue.
