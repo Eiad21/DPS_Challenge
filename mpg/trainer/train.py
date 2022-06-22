@@ -5,6 +5,8 @@ import pandas as pd
 import pathlib
 import tensorflow as tf
 
+from sklearn.preprocessing import StandardScaler
+
 from tensorflow import keras
 from tensorflow.keras import layers
 
@@ -23,7 +25,7 @@ First download the dataset.
 dataset_path = "https://storage.googleapis.com/io-vertex-codelab/auto-mpg.csv"
 dataset = pd.read_csv(dataset_path, na_values = "?")
 
-dataset.tail()
+dataset.head()
 
 """### Clean the data
 
@@ -32,16 +34,29 @@ The dataset contains a few unknown values.
 
 dataset.isna().sum()
 
-"""To keep this initial tutorial simple drop those rows."""
+"""As only six values are null, drop those rows."""
 
 dataset = dataset.dropna()
 
-"""The `"origin"` column is really categorical, not numeric. So convert that to a one-hot:"""
+"""The `"origin"` column is really categorical, not numeric. So convert that to a one-hot:
+
+We will also extract the car make from the name and convert both the origin and car name to one hot encoding
+
+"""
 
 dataset['origin'] = dataset['origin'].map({1: 'USA', 2: 'Europe', 3: 'Japan'})
 
-dataset = pd.get_dummies(dataset, prefix='', prefix_sep='')
-dataset.tail()
+dataset['car name'] = dataset['car name'].str.split(' ').str.get(0)
+dataset['car name'] = dataset['car name'].replace({'vokswagen': 'vw', 
+                                               'mercedes-benz': 'mercedes', 
+                                               'chevroelt': 'chevrolet',
+                                               'toyouta': 'toyota',
+                                               'maxda': 'mazda',
+                                               'chevy': 'chevrolet'})
+
+dataset = pd.get_dummies(dataset, columns=['origin', 'car name'], prefix='', prefix_sep='')
+
+dataset.head()
 
 """### Split the data into train and test
 

@@ -64,7 +64,7 @@ Next we'll use the container we built to run our training code. First, navigate 
 
 Select 'Custom Container' and choose the container created in the previous step
 
-<img src="https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png" alt="container_c" width="250"/>
+<img src="https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png" alt="container_c" width="350"/>
 <!-- ![container_c](https://codelabs.developers.google.com/codelabs/vertex-ai-custom-models/img/select-custom-container.png) -->
 
 The only other setting that needs to be set is the 'Machine type' in ' Compute and pricing'. Set it to n1-standard-4 as this training job is a relatively lightweight one and leave the rest as is. The training job will take around 15 minutes to complete
@@ -79,4 +79,3 @@ After the model has been deployed, select it from the Models tab and click 'Depl
 <img src="https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true" alt="endpoint_name" width="300"/>
 
 <img src="https://github.com/Eiad21/DPS_Challenge/blob/main/images/endpointname.png?raw=true" alt="endpoint_machine" width="300"/>
-
